@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.navBar>li{
+    padding: 0px 3px;
+    display: inline;
+}

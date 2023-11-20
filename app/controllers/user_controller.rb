@@ -1,5 +1,6 @@
 class UserController<ApplicationController
 
-    def homepageki
+    def homepage
+        @post=Post.all
     end
 end

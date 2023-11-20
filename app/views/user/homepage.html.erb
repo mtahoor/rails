@@ -1,1 +1,9 @@
-welcome to homePage
+<% content_for :page_title ,"Home Page"%>
+
+<h1 class="container">Home Page</h1>
+
+<% @post.each do |p| %>
+    <div class="container">
+        <%=render  partial:'user/post',locals:{p:p}%>
+    </div>
+<%end%>
