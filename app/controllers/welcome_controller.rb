@@ -3,6 +3,8 @@ class WelcomeController < ApplicationController
   before_action :values
 
   def home
+    @post=Post.last_1
+    @category=Category.all
     @message='hello holmes'
     logger.debug "1.Message #{welcome_home_url}"
     flash[:danger]="flash Message worked  "

@@ -1,7 +1,7 @@
 <% content_for :page_title ,"Home Page"%>
 
 <h1 class="container">Home Page</h1>
-
+<%=Post.d%>
 <% @post.each do |p| %>
     <div class="container">
         <%=render  partial:'user/post',locals:{p:p}%>

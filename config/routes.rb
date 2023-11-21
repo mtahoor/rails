@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "user#homepage"  
+  root to: "welcome#home"  
   get 'welcome', to: 'welcome#home'
   get 'welcome/home'
   get 'welcome/pricing'
