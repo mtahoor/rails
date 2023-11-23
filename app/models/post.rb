@@ -9,7 +9,7 @@ class Post < ApplicationRecord
     def self.details
         "This is a class method and can access the properties of the class #{all.size}"
     end
-    scope:"last_2",->{limit(2)}
+    scope:"last_1",->{limit(1)}
 
 private
 

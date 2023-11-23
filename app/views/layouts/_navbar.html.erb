@@ -1,11 +1,16 @@
-<div class="bg-dark-subtle">
-    <div class="container d-flex align-items-center  justify-content-between mb-2">
+
+    <div class="px-2 bg-dark-subtle d-flex align-items-center  justify-content-between mb-2">
         <h1 class="">Rails App</h1>
         <ul class="navBar">
             <li> <%= link_to "Home" ,root_url%></li>
             <li><%= link_to "About" ,welcome_about_us_path%></li>
             <li><%= link_to "Pricing" ,welcome_pricing_path%></li>
             <li><%= link_to "Contact" ,welcome_contact_path %></li>
+            <% if user_signed_in? %>
+        <li>
+            <%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <%else%>
+            <li><%= link_to "Sign In" ,new_user_registration_path %></li>
+            <%end%>
         </ul>
     </div>
-</div>

@@ -11,12 +11,13 @@
   </head>
 
   <body>
-    <%= render partial:"layouts/navbar"%>
-    <div class="container">
-      
-    </div>
-    <div class="container">
-    <%= yield %>
+    <div class="container px-0 bg-white" style="height: 100vh;" >
+      <%= render partial:"layouts/navbar"%>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <div class="px-2">
+        <%= yield %>
+      </div>
     </div>
     <%= render partial:"layouts/footer"%>
   </body>
